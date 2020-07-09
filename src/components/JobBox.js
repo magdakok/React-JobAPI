@@ -1,33 +1,59 @@
 import React from "react";
 import styled from "styled-components";
+import TechButton from "./TechButton";
+
+const Container = styled.div`
+  display: flex;
+`;
+
+const Label = styled.div`
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin: 0 3px;
+`;
+
+const LabelNew = styled(Label)`
+  background-color: blue;
+`;
+
+const LabelFeatured = styled(Label)`
+  background-color: ${(props) => (props.primary ? "green" : "yellow")};
+`;
 
 function JobBox(props) {
   const logo = require(`./../images/${props.info.logo}`);
-
+  const technologies = [
+    props.info.role,
+    props.info.level,
+    ...props.info.languages,
+    ...props.info.tools,
+  ];
+  console.log(technologies);
   return (
-    <div className='JobBox'>
+    <Container>
       <div className='JobBox__logo'>
         <img src={logo} />
       </div>
       <div className='JobBox__info'>
         <div className='JobBox__info-top'>
-          <span className='company'>Company</span>
-          <span className='label__new'>NEW</span>
-          <span className='label__featured'>FEATURED</span>
+          <span className='company'>{props.info.company}</span>
+          {props.info.new && <LabelNew>New</LabelNew>}
+          {props.info.featured && <LabelFeatured>Featured</LabelFeatured>}
         </div>
-        <div className='JobBox__info-position'>Position</div>
+        <div className='JobBox__info-position'>{props.info.position}</div>
         <div className='JobBox__info-bottom'>
-          <span className='added'>1 day ago</span>
-          <span className='type'>Full Time</span>
-          <span className='location'>UK only</span>
+          <span className='added'>{props.info.postedAt}</span>
+          <span className='type'>{props.info.contract}</span>
+          <span className='location'>{props.info.location}</span>
         </div>
       </div>
       <div className='JobBox__technologies'>
-        <span className='technology'>Frontend</span>
-        <span className='technology'>Senior</span>
-        <span className='technology'>HTML</span>
+        {technologies.map((t) => (
+          <TechButton text={t} />
+        ))}
       </div>
-    </div>
+    </Container>
   );
 }
 
