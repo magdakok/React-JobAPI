@@ -38,12 +38,12 @@ function JobListingsApp() {
   const renderJobs =
     filter.length === 0
       ? jobsdata.map((i) => {
-          return <JobBox info={i} addFilter={addFilter} />;
+          return <JobBox info={i} addFilter={addFilter} key={i.id} />;
         })
       : jobsdata.map((i) => {
           let technologies = [i.role, i.level, ...i.languages, ...i.tools];
           if (filter.every((item) => technologies.includes(item))) {
-            return <JobBox info={i} addFilter={addFilter} />;
+            return <JobBox info={i} addFilter={addFilter} key={i.id} />;
           }
         });
 
