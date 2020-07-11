@@ -2,6 +2,73 @@ import React from "react";
 import styled from "styled-components";
 import TechButton from "./TechButton";
 
+const Label = styled.div`
+  display: inline-block;
+  padding: 8px 10px 4px 10px;
+  border-radius: 20px;
+  margin: 0 3px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  line-height: 10px;
+  font-size: 10px;
+  color: white;
+`;
+
+const LabelNew = styled(Label)`
+  background-color: hsl(180, 29%, 50%);
+`;
+
+const LabelFeatured = styled(Label)`
+  background-color: hsl(180, 14%, 20%);
+`;
+
+const LogoBox = styled.div`
+  margin: 32px 25px 32px 32px;
+`;
+
+const TechnologiesBox = styled.div`
+  margin-left: auto;
+  margin-right: 16px;
+  display: flex;
+`;
+
+const InfoBox = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const InfoTop = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+`;
+const Company = styled.span`
+  font-weight: bolder;
+  color: hsl(180, 29%, 50%);
+  margin-right: 15px;
+`;
+
+const Position = styled.div`
+  font-weight: bolder;
+  font-size: 17px;
+  cursor: pointer;
+  &:hover {
+    color: hsl(180, 29%, 50%);
+  }
+`;
+
+const InfoBottom = styled.div`
+  margin-top: 12px;
+  display: flex;
+  color: hsl(180, 8%, 52%);
+  font-size: 12px;
+  & > *:not(:first-child)::before {
+    content: "•";
+    display: inline-block;
+    margin: 0 15px;
+  }
+`;
+
 function JobBox(props) {
   const Container = styled.div`
     display: flex;
@@ -25,73 +92,6 @@ function JobBox(props) {
     }
   `;
 
-  const Label = styled.div`
-    display: inline-block;
-    padding: 8px 10px 4px 10px;
-    border-radius: 20px;
-    margin: 0 3px;
-    text-transform: uppercase;
-    font-weight: bolder;
-    line-height: 10px;
-    font-size: 10px;
-    color: white;
-  `;
-
-  const LabelNew = styled(Label)`
-    background-color: hsl(180, 29%, 50%);
-  `;
-
-  const LabelFeatured = styled(Label)`
-    background-color: hsl(180, 14%, 20%);
-  `;
-
-  const LogoBox = styled.div`
-    margin: 32px 25px 32px 32px;
-  `;
-
-  const TechnologiesBox = styled.div`
-    margin-left: auto;
-    margin-right: 16px;
-    display: flex;
-  `;
-
-  const InfoBox = styled.div`
-    display: flex;
-    flex-direction: column;
-  `;
-
-  const InfoTop = styled.div`
-    display: flex;
-    align-items: center;
-    margin-bottom: 14px;
-  `;
-  const Company = styled.span`
-    font-weight: bolder;
-    color: hsl(180, 29%, 50%);
-    margin-right: 15px;
-  `;
-
-  const Position = styled.div`
-    font-weight: bolder;
-    font-size: 17px;
-    cursor: pointer;
-    &:hover {
-      color: hsl(180, 29%, 50%);
-    }
-  `;
-
-  const InfoBottom = styled.div`
-    margin-top: 12px;
-    display: flex;
-    color: hsl(180, 8%, 52%);
-    font-size: 12px;
-    & > *:not(:first-child)::before {
-      content: "•";
-      display: inline-block;
-      margin: 0 15px;
-    }
-  `;
-
   const logo = require(`./../images/${props.info.logo}`);
   const technologies = [
     props.info.role,
@@ -99,7 +99,6 @@ function JobBox(props) {
     ...props.info.languages,
     ...props.info.tools,
   ];
-  console.log(technologies);
   return (
     <Container>
       <LogoBox>
@@ -120,7 +119,7 @@ function JobBox(props) {
       </InfoBox>
       <TechnologiesBox>
         {technologies.map((t) => (
-          <TechButton text={t} />
+          <TechButton text={t} addFilter={props.addFilter} />
         ))}
       </TechnologiesBox>
     </Container>

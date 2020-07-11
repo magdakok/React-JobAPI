@@ -16,7 +16,7 @@ const Button = styled.div`
   }
 `;
 function TechButton(props) {
-  return <Button>{props.text}</Button>;
+  return <Button onClick={props.addFilter}>{props.text}</Button>;
 }
 
 export default TechButton;
