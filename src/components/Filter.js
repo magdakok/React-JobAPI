@@ -15,26 +15,24 @@ const ButtonsBox = styled.div`
   display: flex;
 `;
 
-const Container = styled.div`
-  ${(props) => props.hidden && "visibility: hidden;"}
-  ${(props) => !props.hidden && "visibility: visible;"}
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-  margin: 21px 7px -79px 7px;
-  padding: 21px 41px;
-  border-radius: 7px;
-  box-shadow: 5px 6px 25px -16px rgba(0, 0, 0, 0.3);
-  transform: translateY(-102px);
-`;
-
 function Filter(props) {
+  const Container = styled.div`
+    visibility: ${props.hidden ? "hidden" : "visible"};
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    margin: 21px 7px -79px 7px;
+    padding: 21px 41px;
+    border-radius: 7px;
+    box-shadow: 5px 6px 25px -16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-102px);
+  `;
   return (
     <Container>
       <ButtonsBox>
         {props.labels.map((l) => (
-          <TechButton text={l} id={`TB-${l}`}>
+          <TechButton text={l} key={`TB-${l}`}>
             {l}
           </TechButton>
         ))}
