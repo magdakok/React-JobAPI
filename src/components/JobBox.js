@@ -104,7 +104,7 @@ function JobBox(props) {
     position: relative;
     &::before {
       content: "";
-      ${props.info.featured && "display: block;"}
+      ${!props.info.featured && "display: none;"}
       position: absolute;
       height: 100%;
       width: 5px;
