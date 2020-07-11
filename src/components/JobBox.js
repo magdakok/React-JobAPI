@@ -69,6 +69,28 @@ const InfoBottom = styled.div`
   }
 `;
 
+// const Container = styled.div`
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   background-color: white;
+//   margin: 21px 7px;
+//   border-radius: 7px;
+//   box-shadow: 5px 6px 25px -16px rgba(0, 0, 0, 0.3);
+//   overflow: hidden;
+//   position: relative;
+//   &::before {
+//     content: "";
+//     ${(props) => props.info.featured && "display: block;"}
+//     position: absolute;
+//     height: 100%;
+//     width: 5px;
+//     background-color: hsl(180, 29%, 50%);
+//     left: 0;
+//     top: 0;
+//   }
+// `;
+
 function JobBox(props) {
   const Container = styled.div`
     display: flex;
@@ -82,7 +104,7 @@ function JobBox(props) {
     position: relative;
     &::before {
       content: "";
-      display: ${props.info.featured ? "block" : "none"};
+      ${props.info.featured && "display: block;"}
       position: absolute;
       height: 100%;
       width: 5px;
@@ -119,7 +141,7 @@ function JobBox(props) {
       </InfoBox>
       <TechnologiesBox>
         {technologies.map((t) => (
-          <TechButton text={t} addFilter={props.addFilter} />
+          <TechButton text={t} addFilter={props.addFilter} key={t} />
         ))}
       </TechnologiesBox>
     </Container>
