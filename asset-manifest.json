@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/React-JobAPI/static/css/main.f77f7699.chunk.css",
+    "main.js": "/React-JobAPI/static/js/main.96b7c198.chunk.js",
+    "main.js.map": "/React-JobAPI/static/js/main.96b7c198.chunk.js.map",
+    "runtime-main.js": "/React-JobAPI/static/js/runtime-main.aaca3b7e.js",
+    "runtime-main.js.map": "/React-JobAPI/static/js/runtime-main.aaca3b7e.js.map",
+    "static/js/2.52aea22b.chunk.js": "/React-JobAPI/static/js/2.52aea22b.chunk.js",
+    "static/js/2.52aea22b.chunk.js.map": "/React-JobAPI/static/js/2.52aea22b.chunk.js.map",
+    "index.html": "/React-JobAPI/index.html",
+    "precache-manifest.949408a839eb8842ffb3adbf6d46422b.js": "/React-JobAPI/precache-manifest.949408a839eb8842ffb3adbf6d46422b.js",
+    "service-worker.js": "/React-JobAPI/service-worker.js",
+    "static/css/main.f77f7699.chunk.css.map": "/React-JobAPI/static/css/main.f77f7699.chunk.css.map",
+    "static/js/2.52aea22b.chunk.js.LICENSE.txt": "/React-JobAPI/static/js/2.52aea22b.chunk.js.LICENSE.txt",
+    "static/media/account.svg": "/React-JobAPI/static/media/account.9f72c13b.svg",
+    "static/media/bg-header-desktop.svg": "/React-JobAPI/static/media/bg-header-desktop.6e2f7196.svg",
+    "static/media/bg-header-mobile.svg": "/React-JobAPI/static/media/bg-header-mobile.6b5ff5a0.svg",
+    "static/media/eyecam-co.svg": "/React-JobAPI/static/media/eyecam-co.39eaebdf.svg",
+    "static/media/faceit.svg": "/React-JobAPI/static/media/faceit.76faa79f.svg",
+    "static/media/icon-remove.svg": "/React-JobAPI/static/media/icon-remove.ae67c678.svg",
+    "static/media/insure.svg": "/React-JobAPI/static/media/insure.52b85a50.svg",
+    "static/media/loop-studios.svg": "/React-JobAPI/static/media/loop-studios.6c50fd74.svg",
+    "static/media/manage.svg": "/React-JobAPI/static/media/manage.fbe431a9.svg",
+    "static/media/myhome.svg": "/React-JobAPI/static/media/myhome.e0ad9358.svg",
+    "static/media/photosnap.svg": "/React-JobAPI/static/media/photosnap.3f34b49c.svg",
+    "static/media/shortly.svg": "/React-JobAPI/static/media/shortly.45f63772.svg",
+    "static/media/the-air-filter-company.svg": "/React-JobAPI/static/media/the-air-filter-company.23b515f9.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aaca3b7e.js",
+    "static/js/2.52aea22b.chunk.js",
+    "static/css/main.f77f7699.chunk.css",
+    "static/js/main.96b7c198.chunk.js"
+  ]
+}
