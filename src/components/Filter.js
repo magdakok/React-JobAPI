@@ -9,10 +9,16 @@ const ButtonClear = styled.span`
   &:hover {
     text-decoration: underline;
   }
+  @media only screen and (max-width: 850px) {
+    margin-left: 10px;
+  }
 `;
 
 const ButtonsBox = styled.div`
   display: flex;
+  @media only screen and (max-width: 850px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const Container = styled.div`
@@ -29,6 +35,14 @@ const Container = styled.div`
   top: 0;
   left: 50%;
   transform: translateX(-50%) translateY(-36px);
+  @media only screen and (max-width: 850px) {
+    padding: 13px 15px 13px 7px;
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(0) translateY(-81px);
+  }
 `;
 
 function Filter(props) {

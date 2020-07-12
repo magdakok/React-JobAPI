@@ -11,6 +11,9 @@ const Button = styled.div`
   transition: all 0.2s;
   overflow: hidden;
   display: flex;
+  @media only screen and (max-width: 850px) {
+    font-size: 13px;
+  }
 `;
 
 const ButtonClickable = styled(Button)`

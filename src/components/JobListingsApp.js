@@ -3,7 +3,8 @@ import { jobsdata } from "./../data";
 import JobBox from "./JobBox";
 import Filter from "./Filter";
 import styled from "styled-components";
-import backgroundSvg from "./../images/bg-header-desktop.svg";
+import backgroundSvgDesktop from "./../images/bg-header-desktop.svg";
+import backgroundSvgMobile from "./../images/bg-header-mobile.svg";
 
 const MainContainer = styled.div`
   min-height: 100vh;
@@ -13,13 +14,19 @@ const MainContainer = styled.div`
 const Container = styled.div`
   padding: 52px 11%;
   position: relative;
+  @media only screen and (max-width: 850px) {
+    padding: 10px 6.5%;
+  }
 `;
 
 const Header = styled.div`
   height: 156px;
   background-color: hsl(180, 29%, 50%);
-  background-image: url(${backgroundSvg});
+  background-image: url(${backgroundSvgDesktop});
   background-size: cover;
+  @media only screen and (max-width: 850px) {
+    background-image: url(${backgroundSvgMobile});
+  }
 `;
 
 function JobListingsApp() {
