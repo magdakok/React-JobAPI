@@ -35,10 +35,14 @@ const ButtonDelete = styled.div`
 `;
 
 function TagButton(props) {
+  function handleDelete() {
+    props.removeTags(props.text);
+  }
+
   return props.withCloseBtn ? (
     <Button>
       <ButtonText>{props.text}</ButtonText>
-      <ButtonDelete onClick={props.removeTags}>
+      <ButtonDelete onClick={handleDelete}>
         <img src={iconRemove} alt='Remove tag icon' />
       </ButtonDelete>
     </Button>

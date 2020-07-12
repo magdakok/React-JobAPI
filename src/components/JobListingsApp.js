@@ -31,9 +31,9 @@ function JobListingsApp() {
     }
   }
 
-  function removeTags(e) {
+  function removeTags(tag) {
     let newFilterItems = filter.filter((f) => {
-      return f !== e.target.parentElement.parentElement.innerText;
+      return f !== tag;
     });
     setTags(newFilterItems);
   }
