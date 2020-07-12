@@ -35,7 +35,11 @@ function Filter(props) {
     <Container>
       <ButtonsBox>
         {props.labels.map((l) => (
-          <TechButton text={l} key={`TB-${l}`}>
+          <TechButton
+            text={l}
+            key={`TB-${l}`}
+            removeFilter={props.removeFilter}
+            withCloseBtn>
             {l}
           </TechButton>
         ))}

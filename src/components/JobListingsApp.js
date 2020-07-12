@@ -31,6 +31,13 @@ function JobListingsApp() {
     }
   }
 
+  function removeFilter(e) {
+    let newFilterItems = filter.filter((f) => {
+      return f !== e.target.parentElement.parentElement.innerText;
+    });
+    setFilter(newFilterItems);
+  }
+
   function clear() {
     setFilter([]);
   }
@@ -51,7 +58,12 @@ function JobListingsApp() {
     <MainContainer>
       <Header></Header>
       <Container>
-        <Filter labels={filter} hidden={!filter.length} clear={clear} />
+        <Filter
+          labels={filter}
+          hidden={!filter.length}
+          clear={clear}
+          removeFilter={removeFilter}
+        />
         {renderJobs}
       </Container>
     </MainContainer>
