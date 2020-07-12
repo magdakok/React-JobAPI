@@ -23,12 +23,12 @@ const LabelFeatured = styled(Label)`
 `;
 
 const LogoBox = styled.div`
-  margin: 32px 25px 32px 32px;
+  margin: 0 24px 0 40px;
 `;
 
 const TechnologiesBox = styled.div`
   margin-left: auto;
-  margin-right: 16px;
+  margin-right: 30px;
   display: flex;
 `;
 
@@ -50,7 +50,7 @@ const Company = styled.span`
 
 const Position = styled.div`
   font-weight: bolder;
-  font-size: 17px;
+  font-size: 18px;
   cursor: pointer;
   &:hover {
     color: hsl(180, 29%, 50%);
@@ -61,9 +61,10 @@ const InfoBottom = styled.div`
   margin-top: 12px;
   display: flex;
   color: hsl(180, 8%, 52%);
-  font-size: 12px;
+  font-size: 15px;
   & > *:not(:first-child)::before {
     content: "•";
+    transform: scale(2);
     display: inline-block;
     margin: 0 15px;
   }
@@ -74,14 +75,15 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  margin: 21px 7px;
+  margin: 22px 7px;
+  padding: 31px 0;
   border-radius: 7px;
   box-shadow: 5px 6px 25px -16px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   position: relative;
   &::before {
     content: "";
-    ${(props) => props.featured && "display: block;"}
+    ${(props) => (props.featured ? "display: block;" : "display:none;")}
     position: absolute;
     height: 100%;
     width: 5px;

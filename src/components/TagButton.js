@@ -22,7 +22,7 @@ const ButtonClickable = styled(Button)`
 `;
 
 const ButtonText = styled.div`
-  padding: 9px;
+  padding: 7px;
 `;
 
 const ButtonDelete = styled.div`

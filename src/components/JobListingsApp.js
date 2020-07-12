@@ -11,7 +11,7 @@ const MainContainer = styled.div`
 `;
 
 const Container = styled.div`
-  padding: 52px 11.4%;
+  padding: 52px 11%;
   position: relative;
 `;
 

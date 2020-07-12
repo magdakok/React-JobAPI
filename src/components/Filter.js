@@ -21,14 +21,14 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  padding: 21px 41px;
+  padding: 13px 32px;
   border-radius: 7px;
   box-shadow: 5px 6px 25px -16px rgba(0, 0, 0, 0.3);
   position: absolute;
-  width: 76.2%;
+  width: 77%;
   top: 0;
   left: 50%;
-  transform: translateX(-50%) translateY(-45px);
+  transform: translateX(-50%) translateY(-36px);
 `;
 
 function Filter(props) {
