@@ -52,6 +52,7 @@ function JobListingsApp() {
           if (filter.every((item) => technologies.includes(item))) {
             return <JobBox info={i} addTags={addTags} key={i.id} />;
           }
+          return null;
         });
 
   return (

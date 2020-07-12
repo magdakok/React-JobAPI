@@ -15,40 +15,25 @@ const ButtonsBox = styled.div`
   display: flex;
 `;
 
-// const Container = styled.div`
-//   visibility: ${props => props.hidden ? "hidden" : "visible"};
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   background-color: white;
-//   padding: 21px 41px;
-//   border-radius: 7px;
-//   box-shadow: 5px 6px 25px -16px rgba(0, 0, 0, 0.3);
-//   position: absolute;
-//   width: 76.2%;
-//   top: 0;
-//   left: 50%;
-//   transform: translateX(-50%) translateY(-45px);
-// `;
+const Container = styled.div`
+  visibility: ${(props) => (props.hidden ? "hidden" : "visible")};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 21px 41px;
+  border-radius: 7px;
+  box-shadow: 5px 6px 25px -16px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  width: 76.2%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-45px);
+`;
 
 function Filter(props) {
-  const Container = styled.div`
-    visibility: ${props.hidden ? "hidden" : "visible"};
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    padding: 21px 41px;
-    border-radius: 7px;
-    box-shadow: 5px 6px 25px -16px rgba(0, 0, 0, 0.3);
-    position: absolute;
-    width: 76.2%;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%) translateY(-45px);
-  `;
   return (
-    <Container>
+    <Container hidden={props.hidden}>
       <ButtonsBox>
         {props.labels.map((l) => (
           <TagButton
