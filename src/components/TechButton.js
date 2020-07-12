@@ -38,12 +38,12 @@ function TechButton(props) {
   return props.withCloseBtn ? (
     <Button>
       <ButtonText>{props.text}</ButtonText>
-      <ButtonDelete onClick={props.removeFilter}>
+      <ButtonDelete onClick={props.removeTags}>
         <img src={iconRemove} alt='Remove tag icon' />
       </ButtonDelete>
     </Button>
   ) : (
-    <ButtonClickable onClick={props.addFilter}>
+    <ButtonClickable onClick={props.addTags}>
       <ButtonText>{props.text}</ButtonText>
     </ButtonClickable>
   );

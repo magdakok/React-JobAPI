@@ -23,34 +23,34 @@ const Header = styled.div`
 `;
 
 function JobListingsApp() {
-  const [filter, setFilter] = useState([]);
+  const [filter, setTags] = useState([]);
 
-  function addFilter(e) {
+  function addTags(e) {
     if (!filter.includes(e.target.innerText)) {
-      setFilter([...filter, e.target.innerText]);
+      setTags([...filter, e.target.innerText]);
     }
   }
 
-  function removeFilter(e) {
+  function removeTags(e) {
     let newFilterItems = filter.filter((f) => {
       return f !== e.target.parentElement.parentElement.innerText;
     });
-    setFilter(newFilterItems);
+    setTags(newFilterItems);
   }
 
   function clear() {
-    setFilter([]);
+    setTags([]);
   }
 
   const renderJobs =
     filter.length === 0
       ? jobsdata.map((i) => {
-          return <JobBox info={i} addFilter={addFilter} key={i.id} />;
+          return <JobBox info={i} addTags={addTags} key={i.id} />;
         })
       : jobsdata.map((i) => {
           let technologies = [i.role, i.level, ...i.languages, ...i.tools];
           if (filter.every((item) => technologies.includes(item))) {
-            return <JobBox info={i} addFilter={addFilter} key={i.id} />;
+            return <JobBox info={i} addTags={addTags} key={i.id} />;
           }
         });
 
@@ -62,7 +62,7 @@ function JobListingsApp() {
           labels={filter}
           hidden={!filter.length}
           clear={clear}
-          removeFilter={removeFilter}
+          removeTags={removeTags}
         />
         {renderJobs}
       </Container>

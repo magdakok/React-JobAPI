@@ -38,7 +38,7 @@ function Filter(props) {
           <TechButton
             text={l}
             key={`TB-${l}`}
-            removeFilter={props.removeFilter}
+            removeTags={props.removeTags}
             withCloseBtn>
             {l}
           </TechButton>

@@ -141,7 +141,7 @@ function JobBox(props) {
       </InfoBox>
       <TechnologiesBox>
         {technologies.map((t) => (
-          <TechButton text={t} addFilter={props.addFilter} key={t} />
+          <TechButton text={t} addTags={props.addTags} key={t} />
         ))}
       </TechnologiesBox>
     </Container>
