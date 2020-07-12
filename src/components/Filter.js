@@ -22,11 +22,14 @@ function Filter(props) {
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    margin: 21px 7px -79px 7px;
     padding: 21px 41px;
     border-radius: 7px;
     box-shadow: 5px 6px 25px -16px rgba(0, 0, 0, 0.3);
-    transform: translateY(-102px);
+    position: absolute;
+    width: 76.2%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-45px);
   `;
   return (
     <Container>
