@@ -16,7 +16,7 @@ const ButtonsBox = styled.div`
 `;
 
 // const Container = styled.div`
-//   visibility: ${props => props.hidden ? "hidden" : "visible"};
+//   visibility: ${props => props.hidden ? "hidden" : "visible"}; <-- here where the problem appears, props are not accesible
 //   display: flex;
 //   justify-content: space-between;
 //   align-items: center;
