@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import TechButton from "./TechButton";
+import TagButton from "./TagButton";
 
 const Label = styled.div`
   display: inline-block;
@@ -141,7 +141,7 @@ function JobBox(props) {
       </InfoBox>
       <TechnologiesBox>
         {technologies.map((t) => (
-          <TechButton text={t} addTags={props.addTags} key={t} />
+          <TagButton text={t} addTags={props.addTags} key={t} />
         ))}
       </TechnologiesBox>
     </Container>

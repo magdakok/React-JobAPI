@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import TechButton from "./TechButton";
+import TagButton from "./TagButton";
 
 const ButtonClear = styled.span`
   color: hsl(180, 29%, 50%);
@@ -35,13 +35,13 @@ function Filter(props) {
     <Container>
       <ButtonsBox>
         {props.labels.map((l) => (
-          <TechButton
+          <TagButton
             text={l}
             key={`TB-${l}`}
             removeTags={props.removeTags}
             withCloseBtn>
             {l}
-          </TechButton>
+          </TagButton>
         ))}
       </ButtonsBox>
       <ButtonClear onClick={props.clear}>Clear</ButtonClear>

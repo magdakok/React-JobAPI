@@ -34,7 +34,7 @@ const ButtonDelete = styled.div`
   }
 `;
 
-function TechButton(props) {
+function TagButton(props) {
   return props.withCloseBtn ? (
     <Button>
       <ButtonText>{props.text}</ButtonText>
@@ -49,4 +49,4 @@ function TechButton(props) {
   );
 }
 
-export default TechButton;
+export default TagButton;
