@@ -41,7 +41,7 @@ const Container = styled.div`
     width: 100%;
     top: 0;
     left: 0;
-    transform: translateX(0) translateY(-81px);
+    transform: translateX(0) translateY(-45px);
   }
 `;
 
