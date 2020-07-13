@@ -55,8 +55,14 @@ function JobListingsApp() {
           return <JobBox info={i} addTags={addTags} key={i.id} />;
         })
       : jobsdata.map((i) => {
-          let technologies = [i.role, i.level, ...i.languages, ...i.tools];
-          if (filter.every((item) => technologies.includes(item))) {
+          let technologies = [
+            i.role,
+            i.level,
+            ...i.languages,
+            ...i.tools,
+          ].map((v) => v.toLowerCase());
+          let filteredLowerCase = filter.map((v) => v.toLowerCase());
+          if (filteredLowerCase.every((item) => technologies.includes(item))) {
             return <JobBox info={i} addTags={addTags} key={i.id} />;
           }
           return null;
