@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/React-JobAPI/static/css/main.f77f7699.chunk.css",
-    "main.js": "/React-JobAPI/static/js/main.96b7c198.chunk.js",
-    "main.js.map": "/React-JobAPI/static/js/main.96b7c198.chunk.js.map",
+    "main.js": "/React-JobAPI/static/js/main.c2bc817b.chunk.js",
+    "main.js.map": "/React-JobAPI/static/js/main.c2bc817b.chunk.js.map",
     "runtime-main.js": "/React-JobAPI/static/js/runtime-main.aaca3b7e.js",
     "runtime-main.js.map": "/React-JobAPI/static/js/runtime-main.aaca3b7e.js.map",
     "static/js/2.52aea22b.chunk.js": "/React-JobAPI/static/js/2.52aea22b.chunk.js",
     "static/js/2.52aea22b.chunk.js.map": "/React-JobAPI/static/js/2.52aea22b.chunk.js.map",
     "index.html": "/React-JobAPI/index.html",
-    "precache-manifest.949408a839eb8842ffb3adbf6d46422b.js": "/React-JobAPI/precache-manifest.949408a839eb8842ffb3adbf6d46422b.js",
+    "precache-manifest.4aed790b5a153351d44707d73b0643b9.js": "/React-JobAPI/precache-manifest.4aed790b5a153351d44707d73b0643b9.js",
     "service-worker.js": "/React-JobAPI/service-worker.js",
     "static/css/main.f77f7699.chunk.css.map": "/React-JobAPI/static/css/main.f77f7699.chunk.css.map",
     "static/js/2.52aea22b.chunk.js.LICENSE.txt": "/React-JobAPI/static/js/2.52aea22b.chunk.js.LICENSE.txt",
@@ -30,6 +30,6 @@
     "static/js/runtime-main.aaca3b7e.js",
     "static/js/2.52aea22b.chunk.js",
     "static/css/main.f77f7699.chunk.css",
-    "static/js/main.96b7c198.chunk.js"
+    "static/js/main.c2bc817b.chunk.js"
   ]
 }

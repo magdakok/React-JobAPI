@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "98e8aff50c8badfe68e351779ac9a092",
+    "revision": "6c8248671d32b7dbbb6a823960615043",
     "url": "/React-JobAPI/index.html"
   },
   {
-    "revision": "721c880c128a80795511",
+    "revision": "36e87a754e47e8fe1497",
     "url": "/React-JobAPI/static/css/main.f77f7699.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/React-JobAPI/static/js/2.52aea22b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "721c880c128a80795511",
-    "url": "/React-JobAPI/static/js/main.96b7c198.chunk.js"
+    "revision": "36e87a754e47e8fe1497",
+    "url": "/React-JobAPI/static/js/main.c2bc817b.chunk.js"
   },
   {
     "revision": "16ed0c909a6354e0e0de",
